@@ -6,6 +6,7 @@
 //repeat
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -43,12 +44,12 @@ int main() {
         dist1 = pow(pow(x1, 2) + pow(y1, 2), .5); //= distance;
         cout << "Distance to origin for point: ("
             << x1 << "," << y1 << ") is: "
-            << dist1 << endl;
+            cout << fixed<< setprecision(2) << dist1 << endl; //limit to 2 decimal
 
         dist2 = pow(pow(w1, 2) + pow(u1, 2), .5); //= distance;
         cout << "Distance to origin for point: ("
             << w1 << "," << u1 << ") is: "
-            << dist2 << endl;
+            cout << fixed<< setprecision(2) << dist2 << endl; //limit to 2 decimal
         
         /*create if statement to determin the shortest distance*/
         if (dist1 > dist2) {
